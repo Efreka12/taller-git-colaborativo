@@ -22,7 +22,7 @@ class LoginController extends Controller
 
         // attempt busca el usuario y revisa la contraseña guardada con bcrypt.
         if (Auth::attempt($datosIngreso)) {
-            return redirect()->intended('parqueadero');
+            return redirect()->intended('home');
         }
 
         return redirect()->route('login')->with('error', 'Usuario o contraseña incorrectos');
